@@ -9,7 +9,7 @@ void setup()
 {
   Serial.begin(9600);
   taskRed.runtime(5000); 
-  taskRed.downtime(250); // task set to don't run during 3 seconds
+  taskRed.downtime(250);
 
   taskYellow.runtime(2500);
   taskYellow.downtime(250);

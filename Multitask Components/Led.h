@@ -8,10 +8,12 @@ public:
   Led(char* name, int pin) : Component(name, pin) { _state = 0; }
   
   void routine(){
-  	this->advanced_blink();
+    this->advanced_blink();
 
     /*
-        Add more rountine methods here if desired
+
+      Add more rountine methods here if desired
+    
     */
   }
 
@@ -39,6 +41,8 @@ protected:
   }
 
   /*
-        Implement more rountine methods here if desired
+
+    Implement more rountine methods here if desired
+  
   */
 };
