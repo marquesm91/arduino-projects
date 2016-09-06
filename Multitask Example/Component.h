@@ -31,17 +31,19 @@ class Component
 
       if((_state == 1) && (currentMillis - _previousMillis >= _runtime))
       {
-        _state = 0;  // Turn it off
+        _state = 0; // Turn it off
         
-        _previousMillis = currentMillis;  // Remember the time
-        digitalWrite(_pin, _state);  // Update the actual LED
+        // Remember the last runtime and write new state on pin
+        _previousMillis = currentMillis;
+        digitalWrite(_pin, _state);
       }
       else if ((_state == 0) && (currentMillis - _previousMillis >= _downtime))
       {
-        _state = 1;  // turn it on
+        _state = 1; // Turn it on
         
-        _previousMillis = currentMillis;   // Remember the time
-        digitalWrite(_pin, _state);   // Update the actual LED
+        // Remember the last downtime and write new state on pin
+        _previousMillis = currentMillis; 
+        digitalWrite(_pin, _state);
       }     
     }
 };
