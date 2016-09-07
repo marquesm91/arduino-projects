@@ -1,3 +1,6 @@
+#ifndef COMPONENT_H
+#define COMPONENT_H
+
 #include <Arduino.h>
 
 class Component
@@ -21,7 +24,6 @@ class Component
     // Component Interface
     String name(){ return _name; }
     int pin(){ return _pin; }
-    virtual void routine() = 0;
     void runtime(int value){ _runtime = value; } // Run during value seconds (default 1s)
     void downtime(int value){ _downtime = value; } // Don't run during value seconds (default 1s)
 
@@ -31,3 +33,5 @@ class Component
     long runtime(){ return _runtime; }
     long downtime(){ return _downtime; }
 };
+
+#endif

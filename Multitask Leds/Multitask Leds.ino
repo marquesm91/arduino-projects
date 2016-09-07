@@ -1,4 +1,4 @@
-#include "Led.h"
+#include "../lib/Led.h"
 
 // Configure each component with a name and a pin number
 Led taskRed("t_red", 11);
@@ -8,14 +8,14 @@ Led taskGreen("t_green", 9);
 void setup() 
 {
   Serial.begin(9600);
-  taskRed.runtime(5000); 
-  taskRed.downtime(250);
+  taskRed.runtime(3000); 
+  taskRed.downtime(1000);
 
-  taskYellow.runtime(2500);
-  taskYellow.downtime(250);
+  taskYellow.runtime(2000);
+  taskYellow.downtime(2000);
 
   taskGreen.runtime(1000);
-  taskGreen.downtime(250);
+  taskGreen.downtime(3000);
 
   // set the task pins as outputs:
   pinMode(taskRed.pin(), OUTPUT);
@@ -25,9 +25,9 @@ void setup()
 
 void loop()
 {
-  taskRed.routine();
-  taskYellow.routine();
-  taskGreen.routine();
+  taskRed.advancedBlink();
+  taskYellow.advancedBlink();
+  taskGreen.advancedBlink();
 
   // Meanwhile we could receive data via serial
   if (Serial.available() > 0) {
