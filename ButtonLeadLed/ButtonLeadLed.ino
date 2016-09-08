@@ -1,17 +1,11 @@
-#include "../lib/Button.h"
 #include "../lib/Led.h"
+#include "../lib/Button.h"
 
 // Configure each component with a name and a pin number
 Led Red("t_red", 11);
-Button<Led> Btn("t_button", 2);
+Button Btn("t_button", 2);
 
-void setup() 
-{
-  Btn.debounceTolerance(300);
-  // set the task pins as outputs:
-  pinMode(Red.pin(), OUTPUT);
-  pinMode(Btn.pin(), INPUT);     
-}
+void setup() {}
 
 void loop()
 {

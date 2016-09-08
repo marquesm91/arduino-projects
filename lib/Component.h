@@ -22,16 +22,18 @@ class Component
     }
 
     // Component Interface
-    String name(){ return _name; }
-    int pin(){ return _pin; }
-    void runtime(int value){ _runtime = value; } // Run during value seconds (default 1s)
-    void downtime(int value){ _downtime = value; } // Don't run during value seconds (default 1s)
+  	String name(){ return _name; }
+    void name(String value){ _name = value; }
+  	int pin(){ return _pin; }
+    void pin(int value){ _pin = value; }
+  	void runtime(int value){ _runtime = value; } // Run during value seconds (default 1s)
+  	void downtime(int value){ _downtime = value; } // Don't run during value seconds (default 1s)
 
   protected:
-    void previousMillis(unsigned long value){ _previousMillis = value; }
-    unsigned long previousMillis(){ return _previousMillis; }
-    long runtime(){ return _runtime; }
-    long downtime(){ return _downtime; }
+  	void previousMillis(unsigned long value){ _previousMillis = value; }
+  	unsigned long previousMillis(){ return _previousMillis; }
+  	long runtime(){ return _runtime; }
+  	long downtime(){ return _downtime; }
 };
 
 #endif

@@ -3,7 +3,6 @@
 
 #include "Component.h"
 
-template <class T>
 class Button : public Component{
 private:
 	int _state;
@@ -16,6 +15,7 @@ public:
 		_state = 0; 
 		_lastState = _state;
 		_toleranceTime = MIN_TOL;
+		pinMode(pin, INPUT);
 	}
 	
 	void debounceTolerance(unsigned long value){ 
@@ -23,7 +23,9 @@ public:
 		else _toleranceTime = value; // value in milliseconds
 	}
 	
-	void buttonLeadLed(T &Component){	
+	int state(){ return _state; }
+
+	void buttonLeadLed(Led &Component){	
 	  _state = digitalRead(this->pin()); // if pressed _state = 1
 
 	  if (_state != _lastState){
