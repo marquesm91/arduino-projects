@@ -33,7 +33,6 @@ The button has the goal to change the Led state if pressed. If you hold it the L
 ### Sketch
 
 <img src="https://github.com/marquesm91/arduino-projects/blob/master/ButtonLeadLed/Sketch_Project.png" width="250">
-<<<<<<< HEAD
 
 ## Parking Sensor
 
@@ -43,7 +42,7 @@ Reproducing the system we can find in any shopping parking nowdays. I used a pot
 
 * 2 leds
 * 1 potenciometer 10k ohm
-* 1 Ultrasonic sensor HC-SR04
+* 1 Ultrasonic ranging module HC-SR04
 * 2 resistor 200 ohm
 * 11 Jump wires
 
@@ -53,17 +52,15 @@ Reproducing the system we can find in any shopping parking nowdays. I used a pot
 
 ## RControl
 
-Controlling your Samsung TV (later others) using a IR emissor with **IRremote** library.
+Controlling my Samsung TV (later others) with the **IRremote** library using a IR emissor.
 
 ### Component list
 
 * 1 Infrared emissor
 * 1 Infrared receptor
 * 1 resistor 150 ohm
-* 2 Jump wires
+* 5 Jump wires
 
 ### Sketch
 
 <img src="https://github.com/marquesm91/arduino-projects/blob/master/RControl/Sketch_Project.png" width="250">
-=======
->>>>>>> 1e1a17098e4256da72f5439e2f88f2dfed0ba6b7
